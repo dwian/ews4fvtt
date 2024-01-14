@@ -29,8 +29,7 @@
     "description": "",
     "quantity": 1,
     "weight": 0,
-    "attributes": {},
-    "groups": {}
+    "ammo": 1
   },
   "armor": {
     "desription": "",
@@ -39,7 +38,7 @@
     "defense": 1
   },
   "equipment": {
-    "desription": "",
+    "description": "",
     "quantity": 1,
     "weight": 0
   }
