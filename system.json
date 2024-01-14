@@ -1,0 +1,40 @@
+{
+  "id": "ews4fvtt",
+  "version": "0.0.1",
+  "title": "Ein-Würfel-System",
+  "url": "https://github.com/dwian/ews4fvtt/",
+  "description": "Implementation of the rules for the ''Ein-Würfel-System'' (One-Dice-System) on FoundryVTT.",
+  "license": "LICENSE",
+  "authors": [
+    {
+      "name": "dwian",
+      "url": "https://github.com/dwian/ews4fvtt/"
+    }
+  ],
+  "esmodules": ["ews.js"],
+  "styles": ["styles/ews.css"],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11",
+    "max":"11"
+  },
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "manifest": "https://github.com/dwian/ews4fvtt/main/system.json",
+  "download": "https://github.com/dwian/ews4fvtt/archive/refs/tags/release-082.zip"
+}
