@@ -1,310 +1,262 @@
 {
-  "Actor": {
-    "types": ["character", "npc", "monster"],
-    "templates": {
-      "base": {
-        "wounds": {
-          "value": 0,
-          "min": 0,
-          "max": 16
-        },
-        "category": 0,
-        "biography": ""
-      }
-    },
-    "character": {
-      "templates": ["base"],
-      "abilities": {
-        "1": {
-          "name": "",
-          "base": 9,
-          "value": 10,
-          "power": []
-        },
-        "2": {
-          "name": "",
-          "base": 9,
-          "value": 10,
-          "power": []
-        },
-        "3": {
-          "name": "",
-          "base": 9,
-          "value": 10,
-          "power": []
-        },
-        "4": {
-          "name": "",
-          "base": 9,
-          "value": 10,
-          "power": []
+    "Actor": {
+      "types": ["character", "npc", "creature"],
+      "templates": {
+        "base": {
+          "wounds": {
+            "value": 0,
+            "min": 0,
+            "max": 16
+          },
+          "category": 0,
+          "biography": ""
         }
       },
-      "trade": {
-        "1": {
-          "name": "",
-          "base": 6,
-          "value": 3
+      "character": {
+        "templates": ["base"],
+        "abilities": {
+          "1": {
+            "name": "",
+            "base": 9,
+            "value": 10,
+            "power": []
+          },
+          "2": {
+            "name": "",
+            "base": 9,
+            "value": 10,
+            "power": []
+          },
+          "3": {
+            "name": "",
+            "base": 9,
+            "value": 10,
+            "power": []
+          },
+          "4": {
+            "name": "",
+            "base": 9,
+            "value": 10,
+            "power": []
+          }
         },
-        "2": {
-          "name": "",
-          "base": 6,
-          "value": 0
-        }
-      },
-      "specialisation": {
-        "1": {
-          "name": "",
-          "base": 12,
-          "value": 3,
-          "dependsOn": []
+        "trade": {
+          "1": {
+            "name": "",
+            "base": 6,
+            "value": 3
+          },
+          "2": {
+            "name": "",
+            "base": 6,
+            "value": 0
+          }
         },
-        "2": {
-          "name": "",
-          "base": 12,
-          "value": 0,
-          "dependsOn": []
-        },
-        "3": {
+        "specialisation": {
+          "1": {
             "name": "",
             "base": 12,
             "value": 3,
             "dependsOn": []
-        },
-        "4": {
+          },
+          "2": {
             "name": "",
             "base": 12,
             "value": 0,
             "dependsOn": []
+          },
+          "3": {
+              "name": "",
+              "base": 12,
+              "value": 3,
+              "dependsOn": []
+          },
+          "4": {
+              "name": "",
+              "base": 12,
+              "value": 0,
+              "dependsOn": []
+          }
         }
+      },
+      "npc": {
+        "templates": ["base"],
+        "cr": 0
+      },
+      "creature": {
+        "templates": ["base"],
+        "cr": 0
       }
     },
-    "npc": {
-      "templates": ["base"],
-      "cr": 0
-    },
-    "monster": {
-      "templates": ["base"],
-      "cr": 0
-    }
-  },
-  "Item": {
-    "types": ["weapon", "armor", "equipment", "consumable", "tool", "specie", "background", "backpack", "trade", "spell", "ability", "power"],
-    "templates": {
-      "itemDescription": {
-        "description": {
-          "value": "",
-          "weight": 500,
-          "chat": "",
-          "equipped": false,
-          "unidentified": false
+    "Item": {
+      "types": ["weapon", "armor", "equipment", "consumable", "tool", "specie", "backpack", "trade", "spell", "ability", "power"],
+      "templates": {
+        "itemDescription": {
+          "description": {
+            "value": "",
+            "weight": 500,
+            "chat": "",
+            "equipped": false,
+            "unidentified": false
+          },
+          "source": {}
         },
-        "source": {}
+        "physicalItem": {
+          "quantity": 1,
+          "weight": 0,
+          "price": {
+            "value": 0,
+            "denomination": "gp"
+          },
+          "attunement": 0,
+          "equipped": false,
+          "rarity": "",
+          "identified": true
+        },
+        "activatedEffect": {
+          "activation": {
+            "type": "",
+            "cost": null,
+            "condition": ""
+          },
+          "duration": {
+            "value": "",
+            "units": ""
+          },
+          "cover": null,
+          "crewed": false,
+          "target": {
+            "value": null,
+            "width": null,
+            "units": "",
+            "type": ""
+          },
+          "range": {
+            "value": null,
+            "long": null,
+            "units": ""
+          },
+          "uses": {
+            "value": null,
+            "max": "",
+            "per": null,
+            "recovery": ""
+          },
+          "consume": {
+            "type": "",
+            "target": null,
+            "amount": null
+          }
+        },
+        "action": {
+          "ability": null,
+          "actionType": null,
+          "attackBonus": "",
+          "chatFlavor": "",
+          "critical": {
+            "threshold": null,
+            "damage": ""
+          },
+          "damage": {
+            "parts": [],
+            "versatile": ""
+          },
+          "formula": "",
+          "save": {
+            "ability": "",
+            "dc": null,
+            "scaling": "spell"
+          }
+        },
+        "base": {
+          "name":"",
+          "description": ""
+        },
+        "mountable": {
+          "armor": {
+          "value": null
+          }
+        }
       },
-      "base": {
-        "name":"",
-        "description": ""
-      }
-    },
-    "weapon": {
-      "templates": ["itemDescription", "physicalItem" ,"activatedEffect", "action", "mountable"],
-      "weaponType": "simpleM",
-      "baseItem": "",
-      "properties": {},
-      "proficient": null
-    },
-    "consumable": {
-      "templates": ["itemDescription", "physicalItem", "activatedEffect", "action"],
-      "consumableType": "potion",
-      "uses": {
-        "autoDestroy": false
-      }
-    },
-    "equipment": {
-      "templates": ["itemDescription", "physicalItem", "activatedEffect", "action", "mountable"],
+      "weapon": {
+        "templates": ["itemDescription", "physicalItem" ,"activatedEffect", "action", "mountable"],
+        "weaponType": "simpleM",
+        "baseItem": "",
+        "properties": {},
+        "proficient": null
+      },
       "armor": {
-        "type": "light",
-        "value": null,
-        "dex": null
+        "templates": ["itemdescription", "physicalItem", "activatedEffect", "action", "mountable"],
+        "defence": 0
       },
-      "baseItem": "",
-      "speed": {
-        "value": null,
-        "conditions": ""
+      "equipment": {
+        "templates": ["itemDescription", "physicalItem", "activatedEffect", "action", "mountable"],
+        "armor": {
+          "type": "light",
+          "value": null,
+          "dex": null
+        },
+        "baseItem": "",
+        "speed": {
+          "value": null,
+          "conditions": ""
+        },
+        "strength": null,
+        "stealth": false,
+        "proficient": null
       },
-      "strength": null,
-      "stealth": false,
-      "proficient": null
-    },
-    
-    "tool": {
-      "templates": ["itemDescription", "physicalItem"],
-      "toolType": "",
-      "baseItem": "",
-      "chatFlavor": "",
-      "proficient": null,
-      "bonus": ""
-    },
-    "trade":{
-      "templates": ["base"],
-      "value": 3
-    },
-    "ability": {
-      "templates": ["base"],
-      "value": 10,
-      "power": []
-    },
-    "spell": {
-      "templates": ["base"],
-      "school": "",
-      "type": "",    
-      "materials": {
-        "description": "",
-        "value": "",
-        "consumed": false,
-        "cost": 0,
-        "supply": 0
+      "consumable": {
+        "templates": ["itemDescription", "physicalItem", "activatedEffect", "action"],
+        "consumableType": "potion",
+        "uses": {
+          "autoDestroy": false
+        }
       },
-      "value": 10,
-      "power": []
-    },
-    "power": {
-      "templates": ["base"],
-      "value": 1
+      "tool": {
+        "templates": ["itemDescription", "physicalItem"],
+        "toolType": "",
+        "baseItem": "",
+        "chatFlavor": "",
+        "proficient": null,
+        "bonus": ""
+      },
+      "specie": {
+        "modVValues": {}
+      },
+      "backpack": {
+          "templates": ["itemDescription", "physicalItem"],
+          "capacity": {
+          "type": "weight",
+          "value": null,
+          "weightless": false
+        }
+      },
+      "trade":{
+        "templates": ["base"],
+        "value": 3
+      },
+      "spell": {
+        "templates": ["base"],
+        "school": "",
+        "type": "",    
+        "materials": {
+          "description": "",
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "value": 10,
+        "power": []
+      },
+      "ability": {
+        "templates": ["base"],
+        "value": 10,
+        "power": []
+      },
+      "power": {
+        "templates": ["base"],
+        "value": 1
+      }
     }
-------
-
-"templates": {
-  "physicalItem": {
-    "quantity": 1,
-    "weight": 0,
-    "price": {
-      "value": 0,
-      "denomination": "gp"
-    },
-    "attunement": 0,
-    "equipped": false,
-    "rarity": "",
-    "identified": true
-  },
-
-  "activatedEffect": {
-    "activation": {
-      "type": "",
-      "cost": null,
-      "condition": ""
-    },
-    "duration": {
-      "value": "",
-      "units": ""
-    },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": null,
-      "width": null,
-      "units": "",
-      "type": ""
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": ""
-    },
-    "uses": {
-      "value": null,
-      "max": "",
-      "per": null,
-      "recovery": ""
-    },
-    "consume": {
-      "type": "",
-      "target": null,
-      "amount": null
-    }
-  },
-
-  "action": {
-
-    "ability": null,
-
-    "actionType": null,
-
-    "attackBonus": "",
-
-    "chatFlavor": "",
-
-    "critical": {
-
-      "threshold": null,
-
-      "damage": ""
-
-    },
-
-    "damage": {
-
-      "parts": [],
-
-      "versatile": ""
-
-    },
-
-    "formula": "",
-
-    "save": {
-
-      "ability": "",
-
-      "dc": null,
-
-      "scaling": "spell"
-
-    }
-
-  },
-
-  "mountable": {
-
-    "armor": {
-
-      "value": null
-
-    },
-
-  }
-
-},
-
-"htmlFields": ["description.value", "description.chat", "description.unidentified"],
-
-"backpack": {
-
-  "templates": ["itemDescription", "physicalItem"],
-
-  "capacity": {
-
-    "type": "weight",
-
-    "value": null,
-
-    "weightless": false
-
-  },
-
-},
-
-"weapon": {
-
-  "templates": ["itemDescription", "physicalItem" ,"activatedEffect", "action", "mountable"],
-
-  "weaponType": "simpleM",
-
-  "baseItem": "",
-
-  "properties": {},
-
-  "proficient": null
-
-
 }
