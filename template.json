@@ -1,6 +1,6 @@
 {
     "Actor": {
-      "types": ["character", "npc", "monster"],
+      "types": ["character", "npc", "creature"],
       "templates": {
         "base": {
           "wounds": {
@@ -83,7 +83,7 @@
         "templates": ["base"],
         "cr": 0
       },
-      "monster": {
+      "creature": {
         "templates": ["base"],
         "cr": 0
       }
