@@ -1,4 +1,4 @@
-import { EWSItemSheet } from "./module/EWSItemSheet.js";
+import { EWSItemSheet } from "./module/sheets/EWSItemSheet.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -7,10 +7,10 @@ import { EWSItemSheet } from "./module/EWSItemSheet.js";
 /**
  * Init hook.
  */
-Hooks.once("init", async function() {
+Hooks.once("init", function() {
   console.log("ews | initialize EWS");
 
-  //Items.unregisterSheet("core", ItemSheet);
+  Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("ews", EWSItemSheet, { makeDefault: true });
 
 });
