@@ -1,0 +1,140 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'EWS4FVTT.actorName' }}"/></h1>
+      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+      use both the "grid" and "grid-Ncol" class where "N" can be any number
+      from 1 to 12 and will create that number of columns.  --}}
+      <div class="resources">
+        <div class="resource flex-group-center">
+          <label for="system.wounds" class="resource-label">{{ localize 'EWS4FVTT.wounds' }}</label>
+          <div class="resource-content flex-center">{{log this}}
+          {{#each actor.system.wounds}}
+          <i class="fa-solid fa-{{ state }} woundstate-{{ state }}" type="text" name="system.wounds" placeholder="{{ power }}"></i>
+          {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item active" data-tab="description">{{ localize 'EWS4FVTT.actorDescription' }}</a>
+    <a class="item" data-tab="traits">{{ localize 'EWS4FVTT.traits' }}</a>
+    <a class="item" data-tab="features">{{ localize 'EWS4FVTT.features' }}</a>
+    <a class="item" data-tab="items">{{ localize 'EWS4FVTT.items' }}</a>
+    <a class="item" data-tab="spells">{{ localize 'EWS4FVTT.spells' }}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      <section id="desc1">
+        <div id="sketch">
+          <img class="sketch-img align-center" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
+        <div id="twoWords">
+          <label class="textarea">Zwei Worte</label>
+          <textarea title="Beschreibe deine Figur in nur zwei Worten"></textarea>
+        </div>
+        <div id="attitude">
+          <label class="textarea">Marotte/Requisite/Handlung</label>
+          <textarea title="Was macht deine Figur auf den ersten (oder zweiten) Blick unverkennbar?"></textarea>
+        </div>
+        <div id="dictum">
+          <label class="textarea">Typischer Ausspruch</label>
+          <textarea></textarea>
+        </div>
+      </section>
+      <section id="desc2">
+        <div id="specie">
+          <input type="text" name="acSpecie" placeholder="{{ localize 'EWS4FVTT.specie' }}">
+        </div>
+        <div id="gender">
+          <input type="text" name="acGender" placeholder="{{ localize 'EWS4FVTT.gender' }}">
+        </div>
+        <div id="age">
+          <input type="text" name="acAge" placeholder="{{ localize 'EWS4FVTT.age' }}">
+        </div>
+        <div id="height">
+          <input type="text" name="acHeight" placeholder="{{ localize 'EWS4FVTT.height' }}">
+        </div>
+        <div id="weight">
+          <input type="text" name="acWeight" placeholder="{{ localize 'EWS4FVTT.weight' }}">
+        </div>
+        <div id="skin">
+          <input type="text" name="acSkin" placeholder="{{ localize 'EWS4FVTT.skin' }}">
+        </div>
+        <div id="hair">
+          <input type="text" name="acHair" placeholder="{{ localize 'EWS4FVTT.hair' }}">
+        </div>
+        <div id="eyes">
+          <input type="text" name="acEyes" placeholder="{{ localize 'EWS4FVTT.eyes' }}">
+        </div>
+      </section>
+      <section id="desc3">
+        <div id="look">
+          <label class="textarea">Aussehen und typische Kleidung</label>
+          <textarea></textarea>
+        </div>
+      </section>
+
+      
+    </div>
+
+<!-- {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}} -->
+
+    {{!-- Owned Features Tab --}}
+    <div class="tab features" data-group="primary" data-tab="features">
+      <section class="grid grid-3col">
+        <aside class="sidebar">
+
+          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+          use both the "grid" and "grid-Ncol" class where "N" can be any number
+          from 1 to 12 and will create that number of columns.  --}}
+          <div class="abilities flexcol">
+            {{#each system.abilities as |ability key|}}
+            <div class="ability flexrow flex-group-center">
+              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
+              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+            </div>
+            {{/each}}
+          </div>
+        </aside>
+
+        {{!-- For the main features list, span the right two columns --}}
+        <section class="main grid-span-2">
+          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
+          {{> "systems/ews4fvtt/templates/actor/parts/actor-features.html"}}
+        </section>
+
+      </section>
+    </div>
+
+    {{!-- Active Traits Tab --}}
+    <div class="tab traits flexcol" data-group="primary" data-tab="traits">
+      {{> "systems/ews4fvtt/templates/actor/parts/actor-traits.html"}}
+    </div>
+
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+       {{> "systems/ews4fvtt/templates/actor/parts/actor-items.html"}}
+    </div>
+
+    {{!-- Owned Spells Tab --}}
+    <div class="tab spells" data-group="primary" data-tab="spells">
+      {{> "systems/ews4fvtt/templates/actor/parts/actor-spells.html"}}
+    </div>
+
+  </section>
+</form>
+

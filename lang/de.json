@@ -1,39 +1,40 @@
 {
-  "SETTINGS.SimpleMacroShorthandN": "Shortened Macro Syntax",
-  "SETTINGS.SimpleMacroShorthandL": "Enable a shortened macro syntax which allows referencing attributes directly, for example @str instead of @attributes.str.value. Disable this setting if you need the ability to reference the full attribute model, for example @attributes.str.label.",
-  "SETTINGS.SimpleInitFormulaN": "Initiative Formula",
-  "SETTINGS.SimpleInitFormulaL": "Enter an initiative formula, such as d20+@dex",
+  "EWS4FVTT.char.HEADER": "********************",
+  "EWS4FVTT.acName": "Name",
+  "EWS4FVTT.wounds": "Wunden",
+  "EWS4FVTT.specie": "Spezies",
+  "EWS4FVTT.gender": "Geschlecht",
+  "EWS4FVTT.age": "Alter",
+  "EWS4FVTT.height": "Größe",
+  "EWS4FVTT.weight": "Gewicht",
+  "EWS4FVTT.skin": "Hautfarbe",
+  "EWS4FVTT.hair": "Haarfarbe",
+  "EWS4FVTT.eyes": "Augenfarbe",
+  "EWS4FVTT.description": "Beschreibung",
+  "EWS4FVTT.traits": "Eigenheiten",
+  "EWS4FVTT.features": "Fähigkeiten",
+  "EWS4FVTT.items": "Ausrüstung",
+  "EWS4FVTT.spells": "Magie",
 
-  "EWS.ItemCreate": "Create Item",
-  "EWS.ItemEdit": "Edit Item",
-  "EWS.ItemDelete": "Delete Item",
-  "EWS.ItemNew": "New Item",
 
-  "EWS.NotifyInitFormulaUpdated": "Initiative formula was updated to",
-  "EWS.NotifyInitFormulaInvalid": "Initiative formula was invalid",
-  "EWS.NotifyGroupDuplicate": "Attribute group already exists.",
-  "EWS.NotifyGroupAttrDuplicate": "Attribute group already exists as an attribute.",
-  "EWS.NotifyGroupAlphanumeric": "Attribute group names may not contain spaces or periods.",
-  "EWS.NotifyGroupReserved": "Attribute group \"{key}\" is reserved and cannot be used.",
-  "EWS.NotifyAttrDuplicate": "Attribute key already exists as a group.",
-  "EWS.NotifyAttrInvalid": "Attribute keys may not contain spaces or periods.",
-
-  "EWS.ResourceMin": "Min",
-  "EWS.ResourceValue": "Value",
-  "EWS.ResourceMax": "Max",
-
-  "EWS.DefineTemplate": "Define as Template",
-  "EWS.UnsetTemplate": "Unset Template",
-  "EWS.NoTemplate": "No Template",
-
-  "EWS.AttributeKey": "Attribute Key",
-  "EWS.AttributeValue": "Value",
-  "EWS.AttributeLabel": "Label",
-  "EWS.AttributeDtype": "Data Type",
-
-  "EWS.DeleteGroup": "Delete group?",
-  "EWS.DeleteGroupContent": "Do you wish to delete this group? This will delete the following group and all attributes included in it: ",
-
-  "EWS.Create": "Create",
-  "EWS.New": "New"
-}
+    "EWS4FVTT.AbilityCon": "Constitution",
+    "EWS4FVTT.AbilityDex": "Dexterity",
+    "EWS4FVTT.AbilityInt": "Intelligence",
+    "EWS4FVTT.AbilityWis": "Wisdom",
+    "EWS4FVTT.AbilityCha": "Charisma",
+  
+    "EWS4FVTT.AbilityStrAbbr": "str",
+    "EWS4FVTT.AbilityConAbbr": "con",
+    "EWS4FVTT.AbilityDexAbbr": "dex",
+    "EWS4FVTT.AbilityIntAbbr": "int",
+    "EWS4FVTT.AbilityWisAbbr": "wis",
+    "EWS4FVTT.AbilityChaAbbr": "cha",
+  
+    "EWS4FVTT.EffectCreate": "Create Effect",
+    "EWS4FVTT.EffectToggle": "Toggle Effect",
+    "EWS4FVTT.EffectEdit": "Edit Effect",
+    "EWS4FVTT.EffectDelete": "Delete Effect",
+  
+    "EWS4FVTT.Add": "Add",
+    "EWS4FVTT.Name": "Schnupsi"
+  }

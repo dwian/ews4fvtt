@@ -1,14 +1,13 @@
 {
   "id": "ews4fvtt",
-  "title": "Ein Würfel System",
-  "description": "Implementation of the rules for the ''Ein-Würfel-System'' (One-Dice-System) on FoundryVTT.",
+  "title": "One-Dice-System",
+  "description": "The One-Dice-System for FoundryVTT!",
   "version": "0.0.1",
-  "license": "GPL 3.0",
   "compatibility": {
-    "minimum": "11",
-    "verified": "11",
-    "maximum": "11"
-    },
+    "minimum": 10,
+    "verified": 11,
+    "maximum":12
+  },
   "authors": [
     {
       "name": "Implementation: dwian",
@@ -16,49 +15,34 @@
       "discord": "dwian"
     },
     {
-      "name": "Creation: Arne von Babenhauserheide u.a.",
+      "name": "Creation: Arne von Babenhauserheide and more",
       "url": "https://1w6.org/anhang/leute"
     },
     {
-      "name": "Illustration: Trudy Wenzel u.a.",
+      "name": "Illustration: Trudy Wenzel and more",
       "url": "https://1w6.org/deutsch/anhang/artwork"
     }
 ],
-"scripts": [
-  "scripts/ews-script.js"
-],
-"esmodules": [
-  "scripts/ews-module.mjs"
-],
-"styles": [
-  "styles/ews.css"
-],
-"packs": [
-  {
-    "name": "monsters",
-    "label": "Monster",
-    "type": "Actor"
-  },
-  {
-    "name": "items",
-    "label": "My Items",
-    "type": "Item"
-  }
-],
+  "esmodules": ["module/ews4fvtt.mjs"],
+  "styles": ["css/ews4fvtt.css"],
+  "scripts": [],
+  "packs": [],
   "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
     {
       "lang": "de",
       "name": "Deutsch",
       "path": "lang/de.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
     }
   ],
   "gridDistance": 1,
   "gridUnits": "m",
+  "url": "",
   "manifest": "https://github.com/dwian/ews4fvtt/main/system.json",
-  "download": "https://github.com/dwian/ews4fvtt/archive/refs/tags/release-082.zip"
+  "download": "",
+  "license": "LICENSE.txt"
 }

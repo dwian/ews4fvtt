@@ -1,0 +1,44 @@
+{
+  "name": "ews4fvtt",
+  "version": "0.0.5",
+  "description": "CSS compiler for the One-Dice-System system",
+  "scripts": {
+    "build": "gulp build",
+    "compile": "gulp css",
+    "watch": "gulp",
+    "gulp": "gulp"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "dwian",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "gulp": "^4",
+    "gulp-autoprefixer": "^8",
+    "gulp-sass": "^4",
+    "gulp-sourcemaps": "^3"
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwian/ews4fvtt.git"
+  },
+  "keywords": [
+    "EWS",
+    "Virtual",
+    "Tabletop",
+    "Ein-Würfel-System",
+    "VTT",
+    "Foundry",
+    "TotM"
+  ],
+  "bugs": {
+    "url": "https://github.com/dwian/ews4fvtt/issues"
+  },
+  "homepage": "https://github.com/dwian/ews4fvtt#readme"
+}
