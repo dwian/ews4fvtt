@@ -2,23 +2,16 @@
 
   {{!-- Sheet Header --}}
   <header class="sheet-header">
-    
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'EWS4FVTT.actorName' }}"/></h1>
-      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  --}}
-      <div class="resources">
-        <div class="resource flex-group-center">
-          <label for="system.wounds" class="resource-label">{{ localize 'EWS4FVTT.wounds' }}</label>
-          <div class="resource-content flex-center">{{log this}}
-          {{#each actor.system.wounds}}
-          <i class="fa-solid fa-{{ state }} woundstate-{{ state }}" type="text" name="system.wounds" placeholder="{{ power }}"></i>
-          {{/each}}
-          </div>
-        </div>
+     {{log this}}
+      <div class="charname">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'EWS4FVTT.actorName' }}"/>
       </div>
-    </div>
+      <div class="wounds">
+        <p>{{ localize 'EWS4FVTT.wounds' }}</p>
+        {{#each actor.system.wounds}}
+        <i class="fa-solid fa-{{ state }} woundstate-{{ state }}" type="text" name="system.wounds" placeholder="{{ power }}"></i>
+        {{/each}}
+      </div>
   </header>
 
   {{!-- Sheet Tab Navigation --}}
@@ -30,10 +23,8 @@
     <a class="item" data-tab="items">{{ localize 'EWS4FVTT.items' }}</a>
     <a class="item" data-tab="spells">{{ localize 'EWS4FVTT.spells' }}</a>
   </nav>
-
   {{!-- Sheet Body --}}
-  <section class="sheet-body">
-
+  <section class="charsheet-body">
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
       <section id="desc1">
@@ -84,9 +75,7 @@
           <label class="textarea">Aussehen und typische Kleidung</label>
           <textarea></textarea>
         </div>
-      </section>
-
-      
+      </section>     
     </div>
 
 <!-- {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
